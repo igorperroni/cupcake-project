@@ -5,6 +5,8 @@ import { ShoppingCart, SignOut } from '@phosphor-icons/react'
 import { useCartStore } from '../../store/useCartStore'
 import { useClientStore } from '../../store/useClientStore'
 
+import cupcakeImage from '../../assets/images.png'
+
 export function Header() {
   const { client, setClient } = useClientStore((state) => ({
     client: state.client,
@@ -19,7 +21,7 @@ export function Header() {
   return (
     <div className="w-full h-14 bg-orange-600 text-white flex items-center justify-between px-6">
       <Link to="/">
-        <span>CPL</span>
+        <img className='w-10 h-10' src={cupcakeImage} alt="Logo"/>
       </Link>
       <div className="flex gap-3">
         {client.email === 'admin@admin.com' && (
