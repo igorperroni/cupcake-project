@@ -5,6 +5,8 @@ import Parse from 'parse/dist/parse.min.js'
 
 import { useClientStore } from '../../store/useClientStore'
 
+import cupcakeImage from '../../assets/images.png'
+
 function Login() {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
@@ -14,7 +16,7 @@ function Login() {
   return (
     <div className="w-screen h-screen flex items-center justify-center bg-slate-50">
       <div className="flex flex-col gap-10 items-center">
-        <h1 className="text-3xl font-bold">CupCake Love</h1>
+        <img className='w-40 h-40' src={cupcakeImage} alt="Logo"/>
         <div className="flex flex-col gap-3">
           <input
             className="border border-slate-100 rounded h-9 w-96 hover:border-slate-300 duration-300 px-3"
